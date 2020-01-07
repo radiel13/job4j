@@ -6,7 +6,7 @@ import ru.job4j.condition.Sqarea;
 
 public class SqareaTest {
     @Test
-    public void squeare(){
+    public void squeare() {
         int in1 = 6;
         int in2 = 2;
         int expected = 2;

@@ -7,7 +7,7 @@ import ru.job4j.condition.Fit;
 public class FitTest {
 
     @Test
-    public void manWeight(){
+    public void manWeight() {
         double in = 176.0;
         double expected = 87.39;
         double out = Fit.manWeight(in);
@@ -16,7 +16,7 @@ public class FitTest {
     }
 
     @Test
-    public void womanWeight(){
+    public void womanWeight() {
 
         double in = 169.0;
         double expected = 67.85;
