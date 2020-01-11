@@ -1,4 +1,4 @@
-package Counter;
+package loop;
 
 import org.junit.Test;
 import ru.job4j.loop.Counter;

@@ -3,7 +3,30 @@ package ru.job4j.calculate;
 public class CarUsage {
     public static void main(String[] args) {
         Car audi = new Car();
-        boolean driving = audi.canDrive();
+
+        if (!audi.canDrive()) {
+            audi.fill(10);
+        }
+        int km = 0;
+        while (audi.canDrive()) {
+            audi.drive(1);
+            km++;
+            if (km == 4) {
+                audi.drive(1);
+                continue;
+            }
+            if (km == 6) {
+                break;
+            }
+        }
+        audi.gasInfo();
+
+
+
+
+
+
+        /*boolean driving = audi.canDrive();
         String carSays = driving ? "I can drive" : "I can't drive:";
         System.out.println(carSays);
         System.out.println("Can you drive? - " + driving);
@@ -19,6 +42,6 @@ public class CarUsage {
         int distance = 10;
         audi.drive(distance);
         audi.gasInfo();
-        System.out.println("oh fuck nvm we done");
+        System.out.println("oh fuck nvm we done");*/
     }
 }

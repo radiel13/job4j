@@ -14,4 +14,12 @@ public class FactorialTest {
                 is(120)
         );
     }
+
+    @Test
+    public void ifZero(){
+        assertThat(
+                Factorial.calc(0),
+                is(1)
+        );
+    }
 }
