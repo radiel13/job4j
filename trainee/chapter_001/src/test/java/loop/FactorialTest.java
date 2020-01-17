@@ -8,7 +8,7 @@ import static org.junit.Assert.assertThat;
 
 public class FactorialTest {
     @Test
-    public void test(){
+    public void test() {
         assertThat(
                 Factorial.calc(5),
                 is(120)
@@ -16,7 +16,7 @@ public class FactorialTest {
     }
 
     @Test
-    public void ifZero(){
+    public void ifZero() {
         assertThat(
                 Factorial.calc(0),
                 is(1)

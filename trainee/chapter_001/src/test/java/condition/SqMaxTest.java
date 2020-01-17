@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class SqMaxTest {
     @Test
     public void lal() {
-        int q = SqMax.max(3,3,3,3);
-        assertThat(q,is(3));
+        int q = SqMax.max(3, 3, 3, 3);
+        assertThat(q, is(3));
     }
 }
