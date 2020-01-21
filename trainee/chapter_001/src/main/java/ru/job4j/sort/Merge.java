@@ -10,12 +10,12 @@ public class Merge {
         int j = 0;
         int y = 0;
         while (y < rsl.length) {
-            if(j >= right.length && i < left.length){
+            if(j >= right.length){
                 rsl[y]=left[i];
                 i++;
                 y++;
                 continue;
-            }else if(i >= left.length && j < right.length){
+            }else if(i >= left.length){
                 rsl[y]=right[j];
                 j++;
                 y++;
