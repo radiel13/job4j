@@ -8,5 +8,17 @@ public class Max {
         return result;
     }
 
+    public static int max (int first, int second, int third){
+        boolean condition = max(second, third) > first;
+        int result = condition ? max(second,third) : first;
+        return result;
+        }
+
+        public static int max(int first, int second, int third, int forth){
+        boolean condition = max(first,second,third) > forth;
+        int result = condition ? max(first,second,third) : forth;
+        return result;
+        }
+
 }
 
