@@ -4,12 +4,11 @@ public class Doctor extends Profession {
 
     private int numOfPacientsPerDay;
 
-    public void heal() {
-    }
-
     public void ressurect() {
 
     }
-
+    public Diagnose heal(Pacient pacient) {
+        return new Diagnose(pacient);
+    }
 
 }
