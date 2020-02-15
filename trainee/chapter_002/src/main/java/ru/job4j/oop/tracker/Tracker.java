@@ -47,16 +47,18 @@ public class Tracker {
     }
 
     public boolean replace(String id, Item item) {
-    int index = indexOf(id);
-    item.setId(id);
-    items[index] = item;
-    return true;
+        int index = indexOf(id);
+        item.setId(id);
+        items[index] = item;
+        return true;
     }
 
     public Item findById(String id) {
+        if(indexOf(id) < 0){
+            return null;
+        }
         return items[indexOf(id)];
     }
-
 
     private int indexOf(String id) {
         int rsl = -1;
@@ -68,4 +70,20 @@ public class Tracker {
         }
         return rsl;
     }
+
+    public void delete(String id) {
+        int i = indexOf(id);
+        items[indexOf(id)] = null;
+        System.arraycopy(items, i + 1, items, i, position - i);
+        items[position] = null;
+        position--;
+
+    }
 }
+/*
+[0 1 2]
+0 = item, id = 111
+1 = item_2 id = 222
+2 = item_3 id = 333
+[null, 1 , 2]
+*/
