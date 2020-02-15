@@ -4,27 +4,30 @@ import java.util.Arrays;
 
 public class Shop {
 
-    public Product[] delete(Product[] products) {
+    public Product[] delete(Product[] products, int index) {
 
-        for (int i = 0; i < products.length-1; i++) {
-            products[i] = products[i + 1];
+     products[index] = null;
+        for (int i = 0; i < products.length - 1; i++) {
+            if(products[i] == null) {
+                products[i] = products[i + 1];
+                products[i + 1] = null;
+            }
         }
-        products[products.length - 1] = null;
+
         return products;
     }
 
     public static void main(String[] args) {
         Product products[] = new Product[4];
 
-
+        products[0] = new Product("beer", 1);
         products[1] = new Product("cheese", 1);
         products[2] = new Product("beef", 1);
         products[3] = new Product("chicken", 1);
         Shop s = new Shop();
-        System.out.println(s.delete(products));
+        s.delete(products, 2);
         for (int i = 0; i < products.length; i++) {
             Product product = products[i];
-            //проверяем, что объект не равен null. тк у нас массив не заполнен целиком.
             if (product != null) {
                 System.out.println(product.getName());
             } else {

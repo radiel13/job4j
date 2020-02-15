@@ -1,15 +1,27 @@
 package ru.job4j.oop.tracker;
 
 public class Item {
+    private String id;
+    private String name;
 
-
-    public Item(String name){
-
+    public Item(String name) {
+        this.name = name;
     }
 
-    public static void main(String[] args) {
-        Bug bug = new Bug("bug");
-        Item item = new Item("asdsa");
-
+    public String getId(){
+        return id;
     }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }
