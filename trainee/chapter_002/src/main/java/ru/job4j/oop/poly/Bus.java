@@ -10,22 +10,25 @@ public class Bus implements Transport {
     }
 
     @Override
-    public void passengers() {
-        System.out.println("There are some passengers on the bus.");
+    public void passengers(int number) {
+        System.out.println("There are " + number + " passengers on the bus.");
     }
 
     @Override
     public double fillUp(int fuel) {
         this.fuel = this.fuel + fuel;
+        double price =  fuel*2;
         System.out.println("Bus has " + this.fuel + " gas.");
-        return this.fuel;
+        System.out.println("Cost = " + price + "$");
+        return price;
     }
 
     public static void main(String[] args) {
         System.out.println("Bus has started.");
         Bus bus = new Bus();
         bus.fillUp(100);
-        bus.passengers();
+        bus.passengers(2);
         bus.run();
-    }
+        System.out.println();
+       }
 }

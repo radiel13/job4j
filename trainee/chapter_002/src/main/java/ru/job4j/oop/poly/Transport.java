@@ -1,7 +1,8 @@
 package ru.job4j.oop.poly;
 
 public interface Transport {
+
     void run();
-    void passengers();
+    void passengers(int number);
     double fillUp(int fuel);
 }
