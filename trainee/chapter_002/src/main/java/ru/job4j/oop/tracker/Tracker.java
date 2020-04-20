@@ -89,10 +89,3 @@ public class Tracker {
         }
     }
 }
-/*
-[0 1 2]
-0 = item, id = 111
-1 = item_2 id = 222
-2 = item_3 id = 333
-[null, 1 , 2]
-*/
