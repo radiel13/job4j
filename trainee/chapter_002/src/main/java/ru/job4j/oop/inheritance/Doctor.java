@@ -7,6 +7,7 @@ public class Doctor extends Profession {
     public void ressurect() {
 
     }
+
     public Diagnose heal(Pacient pacient) {
         return new Diagnose(pacient);
     }

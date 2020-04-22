@@ -12,9 +12,9 @@ public class Matches {
         String n = "Nastya";
         String pl = n;
         while (matches > 0) {
-            if(pl==n){
+            if (pl == n) {
                 pl = p;
-            }else{
+            } else {
                 pl = n;
             }
 

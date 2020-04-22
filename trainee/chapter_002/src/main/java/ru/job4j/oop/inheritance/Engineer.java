@@ -4,11 +4,11 @@ public class Engineer extends Profession {
 
     private int randomfield;
 
-    public void drawPlan(){
+    public void drawPlan() {
 
     }
 
-    public void build(){
+    public void build() {
 
     }
 

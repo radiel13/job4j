@@ -1,8 +1,8 @@
 package ru.job4j.oop.inheritance;
 
-public class Surgeon extends Doctor{
+public class Surgeon extends Doctor {
 
-    public void operation(){
+    public void operation() {
 
     }
 }

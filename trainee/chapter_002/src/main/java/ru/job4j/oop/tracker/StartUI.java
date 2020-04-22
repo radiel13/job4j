@@ -56,6 +56,12 @@ public class StartUI {
         }
     }
 
+    public static void main(String[] args) {
+        Input input = new ConsoleInput();
+        Tracker tracker = new Tracker();
+        new StartUI().init(input, tracker);
+    }
+
     public void init(Input input, Tracker tracker) {
         boolean run = true;
         while (run) {
@@ -95,11 +101,5 @@ public class StartUI {
         System.out.println("4. Find item by Id.");
         System.out.println("5. Find items by name.");
         System.out.println("6. Exit Program.");
-    }
-
-    public static void main(String[] args) {
-        Input input = new ConsoleInput();
-        Tracker tracker = new Tracker();
-        new StartUI().init(input, tracker);
     }
 }

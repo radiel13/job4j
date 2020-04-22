@@ -4,21 +4,8 @@ import java.util.Arrays;
 
 public class Shop {
 
-    public Product[] delete(Product[] products, int index) {
-
-     products[index] = null;
-        for (int i = 0; i < products.length - 1; i++) {
-            if(products[i] == null) {
-                products[i] = products[i + 1];
-                products[i + 1] = null;
-            }
-        }
-
-        return products;
-    }
-
     public static void main(String[] args) {
-        Product products[] = new Product[4];
+        Product[] products = new Product[4];
 
         products[0] = new Product("beer", 1);
         products[1] = new Product("cheese", 1);
@@ -34,6 +21,19 @@ public class Shop {
                 System.out.println("null");
             }
         }
+    }
+
+    public Product[] delete(Product[] products, int index) {
+
+        products[index] = null;
+        for (int i = 0; i < products.length - 1; i++) {
+            if (products[i] == null) {
+                products[i] = products[i + 1];
+                products[i + 1] = null;
+            }
+        }
+
+        return products;
     }
 }
 /* products[0] = new Product("Milk", 10);

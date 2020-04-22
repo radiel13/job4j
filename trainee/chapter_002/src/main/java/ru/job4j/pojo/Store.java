@@ -12,9 +12,9 @@ public class Store {
         prods[1] = bread;
         prods[2] = egg;
 
-        for(int i = 0; i < prods.length; i++){
+        for (int i = 0; i < prods.length; i++) {
             Product pr = prods[i];
-            System.out.println(pr.getName() + " - " + pr.getCount() );
+            System.out.println(pr.getName() + " - " + pr.getCount());
         }
 
         System.out.println("Replace milk to oil.");
