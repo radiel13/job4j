@@ -21,7 +21,7 @@ public class PaintTest {
         System.out.println("execute before method");
         System.setOut(new PrintStream(this.out));
     }
-
+//31211
     @After
     public void backOutput() {
         System.setOut(this.stdout);
