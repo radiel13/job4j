@@ -5,7 +5,7 @@ public class FindEl {
         int rsl = -1;
         int i = 0;
         for (String s : value) {
-            if (s == key) {
+            if (s.equals(key)) {
                 rsl = i;
                 System.out.println("You have found the index of " + key + ". It's " + i);
                 break;
