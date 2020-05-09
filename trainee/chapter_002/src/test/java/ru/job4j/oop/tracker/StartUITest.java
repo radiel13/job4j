@@ -2,7 +2,7 @@ package ru.job4j.oop.tracker;
 
 import org.junit.Test;
 
-<<<<<<< HEAD
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.StringJoiner;
@@ -61,12 +61,9 @@ public class StartUITest {
         System.setOut(def);
     }
 */
-=======
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
 
-public class StartUITest {
->>>>>>> 0516093e27e5aff555d9c65b5df697d28a98a562
+
+
   /*  @Test
     public void whenAddItem() {
         String[] answers = {"Fix PC", "NASTYUSHKA", "INDYUSHKA"};
