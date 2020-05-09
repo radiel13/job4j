@@ -62,7 +62,11 @@ public class StartUI {
         boolean run = true;
         while (run) {
             this.showMenu(actions);
+<<<<<<< HEAD
             int select = input.askInt("Select: ", actions.length);
+=======
+            int select = input.askInt("Select: ");
+>>>>>>> 0516093e27e5aff555d9c65b5df697d28a98a562
             UserAction action = actions[select];
             run = action.execute(input, tracker);
         }
@@ -76,7 +80,11 @@ public class StartUI {
     }
 
     public static void main(String[] args) {
+<<<<<<< HEAD
         Input validate = new ValidateInput();
+=======
+        Input input = new ConsoleInput();
+>>>>>>> 0516093e27e5aff555d9c65b5df697d28a98a562
         Tracker tracker = new Tracker();
         UserAction[] actions = {
                 new CreateAction(),
@@ -87,7 +95,11 @@ public class StartUI {
                 new FindByNameAction(),
                 new ExitAction()
         };
+<<<<<<< HEAD
         new StartUI().init(validate, tracker, actions);
+=======
+        new StartUI().init(input, tracker, actions);
+>>>>>>> 0516093e27e5aff555d9c65b5df697d28a98a562
     }
 
    /* public static void main(String[] args) {
