@@ -3,6 +3,7 @@ package ru.job4j.oop.tracker;
 import java.util.Scanner;
 
 public class ConsoleInput implements Input {
+
     private Scanner scanner = new Scanner(System.in);
 
     @Override
@@ -25,5 +26,4 @@ public class ConsoleInput implements Input {
             throw new IllegalStateException(String.format("Out of bonds %s > [0, %s]", select, max));
         }
     }
-
 }
