@@ -6,6 +6,7 @@
     <version>3.0</version>
     <modules>
         <module>trainee</module>
+        <module>chapter_003</module>
     </modules>
     <name>job4j</name>
     <url>http://job4j.ru/</url>
