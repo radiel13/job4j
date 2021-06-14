@@ -10,8 +10,6 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.IsNull.nullValue;
 
-import static org.junit.Assert.*;
-
 public class TrackerTest {
     @Test
     public void whenAddNewItemThenTrackerHasSameItem() {
@@ -82,35 +80,36 @@ public class TrackerTest {
 
     @Test
     public void whenSortByName() {
-        Tracker tracker = new Tracker();
+        List<Item> items = new ArrayList<>();
         Item item = new Item("c");
         Item item1 = new Item("a");
         Item item2 = new Item("b");
-        tracker.add(item);
-        tracker.add(item1);
-        tracker.add(item2);
-        List<String> list = new ArrayList<>();
-        for (Item someItem : tracker.findAll()) {
-            list.add(someItem.getName());
+        items.add(item);
+        items.add(item1);
+        items.add(item2);
+        Collections.sort(items, new SortByNameItem());
+        List<String> newlist = new ArrayList<>();
+        for (Item someItem : items) {
+            newlist.add(someItem.getName());
         }
-        Collections.sort(list);
-        assertThat(list.toArray(), is(new String[]{"a", "b", "c"}));
+        assertThat(newlist.toArray(), is(new String[]{"a", "b", "c"}));
     }
 
     @Test
     public void whenSortByReverseName() {
-        Tracker tracker = new Tracker();
+        List<Item> items = new ArrayList<>();
         Item item = new Item("c");
         Item item1 = new Item("a");
         Item item2 = new Item("b");
-        tracker.add(item);
-        tracker.add(item1);
-        tracker.add(item2);
-        List<String> list = new ArrayList<>();
-        for (Item someItem : tracker.findAll()) {
-            list.add(someItem.getName());
+        items.add(item);
+        items.add(item1);
+        items.add(item2);
+        Collections.sort(items, new SortByNameItemReverse());
+        List<String> newlist = new ArrayList<>();
+        for (Item someItem : items) {
+            newlist.add(someItem.getName());
         }
-        Collections.sort(list, Collections.reverseOrder());
-        assertThat(list.toArray(), is(new String[]{"c", "b", "a"}));
+        assertThat(newlist.toArray(), is(new String[]{"c", "b", "a"}));
     }
+
 }

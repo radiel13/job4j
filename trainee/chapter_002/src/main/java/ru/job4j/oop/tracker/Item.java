@@ -1,6 +1,8 @@
 package ru.job4j.oop.tracker;
 
-public class Item {
+import java.util.Comparator;
+
+public class Item implements Comparable<Item> {
     private String id;
     private String name;
 
@@ -24,5 +26,8 @@ public class Item {
         this.name = name;
     }
 
-
+    @Override
+    public int compareTo(Item another) {
+        return name.compareTo(another.getName());
+    }
 }
