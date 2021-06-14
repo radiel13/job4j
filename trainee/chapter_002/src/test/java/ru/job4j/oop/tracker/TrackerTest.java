@@ -2,6 +2,10 @@ package ru.job4j.oop.tracker;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.IsNull.nullValue;
@@ -74,5 +78,39 @@ public class TrackerTest {
         String id = bug.getId();
         tracker.delete(id);
         assertThat(tracker.findById(id), is(nullValue()));
+    }
+
+    @Test
+    public void whenSortByName() {
+        Tracker tracker = new Tracker();
+        Item item = new Item("c");
+        Item item1 = new Item("a");
+        Item item2 = new Item("b");
+        tracker.add(item);
+        tracker.add(item1);
+        tracker.add(item2);
+        List<String> list = new ArrayList<>();
+        for (Item someItem : tracker.findAll()) {
+            list.add(someItem.getName());
+        }
+        Collections.sort(list);
+        assertThat(list.toArray(), is(new String[]{"a", "b", "c"}));
+    }
+
+    @Test
+    public void whenSortByReverseName() {
+        Tracker tracker = new Tracker();
+        Item item = new Item("c");
+        Item item1 = new Item("a");
+        Item item2 = new Item("b");
+        tracker.add(item);
+        tracker.add(item1);
+        tracker.add(item2);
+        List<String> list = new ArrayList<>();
+        for (Item someItem : tracker.findAll()) {
+            list.add(someItem.getName());
+        }
+        Collections.sort(list, Collections.reverseOrder());
+        assertThat(list.toArray(), is(new String[]{"c", "b", "a"}));
     }
 }
