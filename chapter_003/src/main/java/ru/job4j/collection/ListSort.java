@@ -11,6 +11,9 @@ public class ListSort {
         Collections.sort(list);
         System.out.println(list);
 
+        Collections.sort(list, Collections.reverseOrder());
+        System.out.println(list);
+
         Integer first = 1;
         Integer second = 2;
         int rsl = first.compareTo(second);
@@ -21,7 +24,6 @@ public class ListSort {
         int rslStr = petr.compareTo(ivan);
         System.out.println(rslStr);
 
-        Collections.sort(list, Collections.reverseOrder());
-        System.out.println(list);
+
     }
 }
