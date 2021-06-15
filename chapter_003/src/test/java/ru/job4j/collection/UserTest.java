@@ -41,7 +41,7 @@ public class UserTest {
     }
 
     @Test
-    public void whenComparePeprVSPetr() {
+    public void whenComparePetrVSPetr() {
         int rsl = new User("Petr", 30)
                 .compareTo(
                         new User("Petr", 31)

@@ -7,6 +7,6 @@ public class SortByNameItemReverse implements Comparator<Item> {
 
     @Override
     public int compare(Item first, Item second) {
-        return (first.getName().compareTo(second.getName()) * (-1));
+        return (second.getName().compareTo(first.getName()));
     }
 }
