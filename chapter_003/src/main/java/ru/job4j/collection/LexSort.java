@@ -7,13 +7,13 @@ public class LexSort implements Comparator<String> {
     @Override
     public int compare(String left, String right) {
         for (int i = 0; i < left.length(); i++) {
-            left = left.substring(0, left.indexOf(' '));
-            double d = Double.parseDouble(left);
-            right = right.substring(0, right.indexOf(' '));
-            double f = Double.parseDouble(right);
+            left = left.substring(0, left.indexOf('.'));
+            int d = Integer.parseInt(left);
+            right = right.substring(0, right.indexOf('.'));
+            int f = Integer.parseInt(right);
 
             if (d != f) {
-                return Double.compare(d, f);
+                return Integer.compare(d, f);
             }
 
         }
