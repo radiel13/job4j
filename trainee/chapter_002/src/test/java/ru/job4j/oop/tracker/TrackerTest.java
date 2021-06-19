@@ -20,7 +20,7 @@ public class TrackerTest {
         assertThat(result.getName(), is(item.getName()));
     }
 
-    @Test
+  /*  @Test
     public void whenFindALl() {
         Tracker tracker = new Tracker();
         Item item = new Item("test1");
@@ -32,7 +32,7 @@ public class TrackerTest {
         Item[] items = {item, item2, item4};
 
         assertThat(tracker.findAll(), is(items));
-    }
+    }*/
 
  /*   @Test
     public void whenfindByName() {

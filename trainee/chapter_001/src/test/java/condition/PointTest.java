@@ -7,8 +7,8 @@ import ru.job4j.condition.Point;
 public class PointTest {
     @Test
     public void distance() {
-        Point p = new Point(2,2,2);
-        Point po = new Point(4,4,4);
+        Point p = new Point(2, 2, 2);
+        Point po = new Point(4, 4, 4);
         double expected = 3.464101615137755;
         double out = p.distance3d(po);
         Assert.assertEquals(expected, out, 0.01);
