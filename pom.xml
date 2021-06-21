@@ -6,6 +6,7 @@
     <version>3.0</version>
     <modules>
         <module>trainee</module>
+        <module>jr</module>
 
     </modules>
     <name>job4j</name>
@@ -72,6 +73,14 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>15</source>
+                    <target>15</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>

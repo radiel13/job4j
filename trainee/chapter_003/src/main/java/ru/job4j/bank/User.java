@@ -2,6 +2,10 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Метод описывает модель клиента
+ * У клиента есть паспорные данные и имя
+ */
 public class User {
     private String passport;
     private String username;
@@ -27,6 +31,11 @@ public class User {
         this.username = username;
     }
 
+    /**
+     * Сравнение клиентов осуществляется по паспортным данным
+     * @param o принимает объект типа Object
+     * @return возвращает true, если паспортные данные равны
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) {
