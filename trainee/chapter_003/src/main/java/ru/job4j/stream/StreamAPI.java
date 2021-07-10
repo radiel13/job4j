@@ -12,7 +12,9 @@ public class StreamAPI {
         }
         System.out.println(numbers);
 
-        List<Integer> newNumbers = numbers.stream().filter(integer -> integer >= 0).collect(Collectors.toList());
+        List<Integer> newNumbers = numbers.stream()
+                .filter(integer -> integer >= 0)
+                .collect(Collectors.toList());
         System.out.println(newNumbers);
     }
 }
