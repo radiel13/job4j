@@ -30,6 +30,10 @@ public class LambdaUsage {
             return left.length() - right.length();
         };
         Arrays.sort(names, lengthCmp);
+        String str = "мама мыла раму";
+        str = str.toUpperCase();
+        System.out.println(str);
+        
     }
 }
 
